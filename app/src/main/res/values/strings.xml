@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SecureMove</string>
+    <string name="title_activity_main2">MainActivity2</string>
+
+
+    <string name="screen1">Bienvenue sur SecureMove</string>
+
+    <string name="screen2">Débloquez le pouvoir du cryptage et du décryptage en un seul endroit</string>
+
+    <string name="screen3">Votre voyage vers une communication sécurisée commence ici</string>
+    <string name="introduction">Bienvenue sur SecureMove !
+        Votre forteresse numérique pour une communication sécurisée. Explorez le pouvoir du cryptage
+        et du décryptage à portée de main, assurant la confidentialité maximale
+        de vos données sensibles.</string>
+    <string name="txtMethod">Nous allons utiliser la méthode de
+        chiffrement de César pour crypter vos données.</string>
+
+
+
+
+
+</resources>
