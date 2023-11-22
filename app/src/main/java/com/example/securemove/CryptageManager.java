@@ -76,28 +76,6 @@ public class CryptageManager {
 
 
 
-    //rsa
-    public static KeyPair generateRSAKeyPair() throws Exception {
-        KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
-        keyPairGenerator.initialize(2048);
-        return keyPairGenerator.generateKeyPair();
-    }
-
-    public static byte[] rsaEncrypt(String text, PublicKey publicKey) throws Exception {
-        Cipher cipher = Cipher.getInstance("RSA");
-        cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-        return cipher.doFinal(text.getBytes());
-    }
-
-    public static String rsaDecrypt(byte[] encryptedText, PrivateKey privateKey) throws Exception {
-        Cipher cipher = Cipher.getInstance("RSA");
-        cipher.init(Cipher.DECRYPT_MODE, privateKey);
-        byte[] decryptedBytes = cipher.doFinal(encryptedText);
-        return new String(decryptedBytes);
-    }
-
-
-
 
 // Vigenere encryption
 public static String vigenereEncrypt(String text, String key) {

@@ -6,12 +6,13 @@
     android:orientation="vertical"
     app:flow_horizontalAlign="center">
 
-    <ImageView
-        android:id="@+id/titleImage"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:src="@drawable/dd"/>
+        app:lottie_rawRes="@raw/on1"
+      />
 
     <TextView
         android:id="@+id/texttitle"

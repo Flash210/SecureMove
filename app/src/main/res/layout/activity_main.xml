@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#ECF4D6"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="#00000000"
         android:text="Skip"
-        android:textColor="#000000"
+        android:textColor="#B31312"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

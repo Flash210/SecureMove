@@ -13,8 +13,11 @@
         et du décryptage à portée de main, assurant la confidentialité maximale
         de vos données sensibles.</string>
     <string name="txtMethod">Nous allons utiliser la méthode de
-        chiffrement de César pour crypter vos données.</string>
+        chiffrement de </string>
 
+    <string name="courseTxt">Découvrez les secrets des cryptomonnaies et lancez-vous dans un voyage vers l\'autonomie financière ! Cliquez sur le bouton ci-dessous pour explorer notre cours complet sur tout ce qui concerne la crypto.</string>
+
+    <string name="welcomeTxt">Bienvenue dans le monde du cryptage</string>
 
 
 

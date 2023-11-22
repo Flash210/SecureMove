@@ -4,22 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EEE2DE"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/textView"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:text="TextView"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/font3"
+        android:text="@string/welcomeTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="409dp"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,16 +33,35 @@
 
         <Button
             android:id="@+id/go"
-            android:layout_width="match_parent"
+            android:layout_width="80dp"
+            android:layout_marginLeft="150dp"
+            android:layout_height="80dp"
+            android:background="@drawable/crpp"
+         />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GOOOOOOOO" />
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+
+            android:textColor="@color/black"
+            android:fontFamily="@font/font2"
+
+
+            android:text="@string/courseTxt" />
 
         <Button
             android:id="@+id/CoursBtn"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/think" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

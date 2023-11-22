@@ -3,78 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#0F0F0F"
+android:background="#7ED7C1"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="1dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/introductionTxt"
-            android:layout_width="wrap_content"
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-android:textColor="#FB2576"
-            android:text="TextView"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/descTxt"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:focusable="false"
-            android:clickable="false"
-
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/exmTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView"
-        android:textColor="#FB2576"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="1dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/images_raduis"
+            android:weightSum="5">
 
 
-            android:textSize="25sp"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
 
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/introductionTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="#FB2576"
+                android:fontFamily="@font/font6"
 
-        <EditText
-            android:inputType="none"
-            android:focusable="false"
-            android:clickable="false"
-            android:id="@+id/exmN"
-            android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="28dp"
-            android:layout_marginRight="28dp"
-            android:layout_weight="1"
+            <EditText
+                android:id="@+id/descTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font4"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:text="TextView"
+                android:textColor="@color/black" />
 
-            android:text="TextView" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/exmTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="#FB2576"
+                android:textSize="25sp"
+                android:fontFamily="@font/font6"
+
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/exmN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:focusable="false"
+                android:inputType="none"
+                android:fontFamily="@font/font4"
+
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

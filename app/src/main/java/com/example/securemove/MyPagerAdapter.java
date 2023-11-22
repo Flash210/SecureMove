@@ -51,25 +51,16 @@ public class MyPagerAdapter extends PagerAdapter {
                 introductionTxt.setText("Introduction au Cryptage avec la Méthode RSA");
                 introductionTxt.setTextColor(Color.parseColor("#22A39F"));
 
-                descTxt.setText("RSA (Rivest–Shamir–Adleman) est un algorithme de cryptage asymétrique.\n" +
-                        "Processus de Chiffrement :\n" +
-                        "\n" +
-                        "Génération de Clé :\n" +
-                        "\n" +
-                        "Choisissez deux grands nombres premiers, p et q.\n" +
-                        "Calculez n = p * q.\n" +
-                        "Calculez la fonction totient d'Euler, φ(n) = (p-1)(q-1).\n" +
-                        "Choisissez un entier e tel que 1 < e < φ(n) et e soit premier avec φ(n).\n" +
-                        "Calculez la clé privée d telle que (d * e) % φ(n) = 1.\n" +
-                        "Chiffrement :\n" +
-                        "\n" +
-                        "L'expéditeur obtient la clé publique du destinataire (e, n).\n" +
-                        "Convertissez le message en clair M en un entier m tel que 0 < m < n.\n" +
-                        "Calculez le message chiffré C avec la formule C ≡ m^e (mod n)." +
-                        "");
+                descTxt.setText("Le chiffre de Vigenère est une méthode de chiffrement du texte alphabétique utilisant une forme simple de substitution polyalphabétique. Nommé d'après le diplomate et cryptographe français Blaise de Vigenère, ce chiffre constitue une amélioration significative par rapport au chiffre de César, qui est un type de chiffrement de substitution où chaque lettre du texte en clair est décalée d'un certain nombre de positions vers le haut ou vers le bas dans l'alphabet.");
                 exmTxt.setText("Exemple de Chiffrement RSA");
                 exmTxt.setTextColor(Color.parseColor("#22A39F"));
-                exmN.setText("ISIMA >> 1639 1455 1639 954 2677");
+                exmN.setText("Supposons que nous voulons chiffrer le message \"CRYPTAGE\" avec la clé \"SECURITE\". Le chiffrement de Vigenère fonctionne en répétant la clé pour qu'elle ait la même longueur que le message, puis en décalant chaque lettre du message par le décalage correspondant dans la clé.\n" +
+                        "\n" +
+                        "Message : C R Y P T A G E\n" +
+                        "\n" +
+                        "Clé : S E C U R I T E\n" +
+                        "\n" +
+                        "Message Chiffré : X U Z F I W I K");
 
                 break;
             case 2:
