@@ -5,6 +5,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.example.securemove.adapter.MyPagerAdapter;
+
 public class Cours extends AppCompatActivity {
 
     @Override

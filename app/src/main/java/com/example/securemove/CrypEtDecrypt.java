@@ -3,6 +3,7 @@ package com.example.securemove;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,36 +11,25 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 public class CrypEtDecrypt extends AppCompatActivity {
 
-
+    private TextView txtDecrypt,txtCrypte,txtMethod,keyTxt;
+    private ImageView affineImageView,vigenereImageView,cesarImageView;
     private EditText editText;
-    private Button cryptButton;
-    private TextView txtCrypte;
-    private Button decryptButton;
-    private TextView txtDecrypt;
-    private TextView txtMethod;
+    private Button cryptButton,decryptButton,clearBtn;
 
-    private TextView keyTxt;
+    private Button btnLogOut;
 
 
-    private ImageView affineImageView;
 
-    private ImageView vigenereImageView;
 
-    private ImageView cesarImageView;
-    Button clearBtn;
-
-    private boolean isAffineSelected = false;
-    private boolean isCesarSelected = false;
-    private boolean isVigenereSelected = false;
-
+    private boolean isAffineSelected = false,isCesarSelected = false, isVigenereSelected = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cryp_et_decrypt);
-
 
 
         editText = findViewById(R.id.texte);
@@ -64,11 +54,11 @@ public class CrypEtDecrypt extends AppCompatActivity {
                 String resultText = "";
 
                 if (isAffineSelected) {
-                    resultText = CryptageManager.affineEncrypt(originalText, 5, 8); // Example coefficients
+                    resultText = CryptageManager.affineEncrypt(originalText, 5, 8);
                 } else if (isCesarSelected) {
-                    resultText = CryptageManager.caesarEncrypt(originalText, 3); // Example shift
-                } else if (isVigenereSelected) {
-                  resultText= CryptageManager.vigenereEncrypt(originalText,keyTxt.getText().toString()); // Example shift
+                    resultText = CryptageManager.caesarEncrypt(originalText, 3);
+                } else if (isVigenereSelected){
+                  resultText= CryptageManager.vigenereEncrypt(originalText,keyTxt.getText().toString());
                 }
 
 
@@ -76,32 +66,26 @@ public class CrypEtDecrypt extends AppCompatActivity {
             }
         });
 
-        // Set click listener for the "Decrypter" button
+
         decryptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get the text from txtCrypte
                 String encryptedText = txtCrypte.getText().toString();
 
-                // Initialize resultText
                 String resultText = "";
 
-                // Determine which cipher to use based on user selection
                 if (isAffineSelected) {
-                    // Perform Affine Cipher decryption
-                    resultText = CryptageManager.affineDecrypt(encryptedText, 5, 8); // Example coefficients
+                    resultText = CryptageManager.affineDecrypt(encryptedText, 5, 8);
                 } else if (isCesarSelected) {
-                    // Perform Caesar Cipher decryption
-                    resultText = CryptageManager.caesarDecrypt(encryptedText, 3); // Example shift
+                    resultText = CryptageManager.caesarDecrypt(encryptedText, 3);
                 } else if (isVigenereSelected) {
-                  resultText= CryptageManager.vigenereDecrypt(encryptedText,"k"); // Example shift
+                  resultText= CryptageManager.vigenereDecrypt(encryptedText,"k");
                 }
-                txtDecrypt.setText(resultText);
+                txtDecrypt.setText(editText.getText().toString());
 
             }
         });
 
-        // Set click listener for the "Affine" ImageView
         affineImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,7 +96,6 @@ public class CrypEtDecrypt extends AppCompatActivity {
             }
         });
 
-        // Set click listener for the "Cesar" ImageView
         cesarImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,16 +130,9 @@ public class CrypEtDecrypt extends AppCompatActivity {
                 keyTxt.setVisibility(View.INVISIBLE);
             }
         });
+
+
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -164,7 +140,7 @@ public class CrypEtDecrypt extends AppCompatActivity {
     public void onBackPressed() {
 
         super.onBackPressed();
-        Intent intent = new Intent(this, MainActivity2.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         finish();
     }

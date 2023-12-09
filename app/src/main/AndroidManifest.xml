@@ -13,18 +13,24 @@
         android:theme="@style/Theme.SecureMove"
         tools:targetApi="31">
         <activity
+            android:name=".screens.Welcome"
+            android:exported="false" />
+        <activity
+            android:name=".OnBordingScreen"
+            android:exported="false" />
+        <activity
             android:name=".Cours"
             android:exported="false" />
         <activity
             android:name=".CrypEtDecrypt"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_main2"
             android:theme="@style/Theme.SecureMove" />
         <activity
-            android:name=".MainActivity"
+            android:name=".screens.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

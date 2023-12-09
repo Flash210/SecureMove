@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -11,11 +12,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.securemove.adapter.ViewPageAdapter;
 
 
-
-
-public class MainActivity extends AppCompatActivity {
+public class OnBordingScreen extends AppCompatActivity {
 
 
     ViewPager mSLideViewPager;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView[] dots;
     ViewPageAdapter viewPagerAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         backbtn = findViewById(R.id.backbtn);
         nextbtn = findViewById(R.id.nextbtn);
         skipbtn = findViewById(R.id.skipButton);
+
+        mSLideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
+        mDotLayout = (LinearLayout) findViewById(R.id.indicator_layout);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,13 +60,15 @@ public class MainActivity extends AppCompatActivity {
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 
-                    Intent i = new Intent(MainActivity.this,MainActivity2.class);
+                    Intent i = new Intent(OnBordingScreen.this, HomeActivity.class);
                     startActivity(i);
                     finish();
 
                 }
 
             }
+
+
         });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
@@ -70,15 +76,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(MainActivity.this,MainActivity2.class);
+                Intent i = new Intent(OnBordingScreen.this, HomeActivity.class);
                 startActivity(i);
                 finish();
 
             }
         });
 
-        mSLideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
-        mDotLayout = (LinearLayout) findViewById(R.id.indicator_layout);
+
 
         viewPagerAdapter = new ViewPageAdapter(this);
 
@@ -141,5 +146,7 @@ public class MainActivity extends AppCompatActivity {
 
         return mSLideViewPager.getCurrentItem() + i;
     }
+
+
 
 }

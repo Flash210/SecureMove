@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEE2DE"
-    tools:context=".MainActivity2">
+    tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -34,10 +35,9 @@
         <Button
             android:id="@+id/go"
             android:layout_width="80dp"
-            android:layout_marginLeft="150dp"
             android:layout_height="80dp"
-            android:background="@drawable/crpp"
-         />
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/crpp" />
 
         <TextView
             android:id="@+id/textView2"
@@ -47,21 +47,36 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="50dp"
             android:layout_marginBottom="10dp"
-            android:textStyle="bold"
-            android:textSize="20dp"
+            android:fontFamily="@font/font2"
+            android:text="@string/courseTxt"
 
             android:textColor="@color/black"
-            android:fontFamily="@font/font2"
+            android:textSize="20dp"
 
 
-            android:text="@string/courseTxt" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/CoursBtn"
-            android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
             android:layout_marginLeft="60dp"
             android:background="@drawable/think" />
 
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/toWelcome"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/uss"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

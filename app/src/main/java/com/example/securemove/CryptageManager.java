@@ -34,7 +34,8 @@ public class CryptageManager {
 
         for (char ch : text.toCharArray()) {
             if (Character.isLetter(ch)) {
-                char encryptedChar = (char) (((a * (ch - 'a') + b) % 26) + 'a');
+                int base = Character.isUpperCase(ch) ? 'A' : 'a';
+                char encryptedChar = (char) (((a * (ch - base) + b) % 26) + base);
                 result.append(encryptedChar);
             } else {
                 result.append(ch);
@@ -44,15 +45,17 @@ public class CryptageManager {
         return result.toString();
     }
 
+
     // Décryptage affine
     public static String affineDecrypt(String text, int a, int b) {
-        int aInverse = modInverse(a, 26); // Calcul de l'inverse modulaire de a
+        int aInverse = modInverse(a, 26);
 
         StringBuilder result = new StringBuilder();
 
         for (char ch : text.toCharArray()) {
             if (Character.isLetter(ch)) {
-                char decryptedChar = (char) (((aInverse * (ch - 'a' - b) + 26) % 26) + 'a');
+                int base = Character.isUpperCase(ch) ? 'A' : 'a';
+                char decryptedChar = (char) (((aInverse * (ch - base - b) + 26) % 26) + base);
                 result.append(decryptedChar);
             } else {
                 result.append(ch);
@@ -61,6 +64,7 @@ public class CryptageManager {
 
         return result.toString();
     }
+
 
     // Calcul de l'inverse modulaire
     private static int modInverse(int a, int m) {

@@ -20,6 +20,55 @@
     <string name="welcomeTxt">Bienvenue dans le monde du cryptage</string>
 
 
+    <string name="cesarInt">"Introduction au Cryptage avec la Méthode César"</string>
+    <string name="cesarDesc">"Le Chiffre de César, nommé d'après Jules César, est l'une des techniques de chiffrement les plus simples et les plus anciennes connues. Il s'agit d'un type de chiffrement par substitution où chaque lettre du texte en clair est décalée d'un certain nombre de positions vers le bas ou vers le haut de l'alphabet. La clé dans le Chiffre de César est le nombre de positions que chaque lettre est décalée, et on l'appelle généralement le \"décalage\" ou la \"clé\"."</string>
+    <string name="cesarExIntro">Exemple de Chiffrement de César</string>
+    <string name="cesarEx">" Cryptons le mot \"Isima\" en utilisant le Chiffre de César avec un décalage de 3.\n " +
+                        "\nI -> L\n" +
+                                "s -> v\n" +
+                                "i -> l\n" +
+                                "m -> p\n" +
+                                "a -> x \n"
+                        + "Mot Crypté = "+
+                        "Lvpxp\n"</string>
+
+
+    <string name="vigenereInt">"Introduction au Cryptage avec la Méthode Vigenère"</string>
+    <string name="vigenereDesc">"Le chiffre de Vigenère est une méthode de chiffrement du texte alphabétique utilisant une forme simple de substitution polyalphabétique. Nommé d'après le diplomate et cryptographe français Blaise de Vigenère, ce chiffre constitue une amélioration significative par rapport au chiffre de César, qui est un type de chiffrement de substitution où chaque lettre du texte en clair est décalée d'un certain nombre de positions vers le haut ou vers le bas dans l'alphabet."</string>
+    <string name="vigenereExIntro">Exemple de Chiffrement de Vigenère</string>
+    <string name="vigenereEx">"Supposons que nous voulons chiffrer le message \"CRYPTAGE\" avec la clé \"SECURITE\". Le chiffrement de Vigenère fonctionne en répétant la clé pour qu'elle ait la même longueur que le message, puis en décalant chaque lettre du message par le décalage correspondant dans la clé.\n" +
+                        "\n" +
+                        "Message : C R Y P T A G E\n" +
+                        "\n" +
+                        "Clé : S E C U R I T E\n" +
+                        "\n" +
+                        "Message Chiffré : X U Z F I W I K"</string>
+
+
+    <string name="affineInt">"Introduction au Cryptage avec la Méthode Affine"</string>
+    <string name="affineDesc">"La méthode affine est un algorithme de cryptage qui fait partie de la famille des chiffrements par substitution. Elle combine deux opérations mathématiques, à savoir la multiplication et l'addition modulo une certaine valeur, pour transformer les caractères d'un texte en clair en caractères chiffrés. Cette méthode offre une sécurité relativement plus élevée que certains chiffrements plus simples."</string>
+    <string name="affineExIntro">Exemple de Chiffrement de Vigenère</string>
+
+    <string name="affineEx">Supposons que nous voulions chiffrer le mot \"HELLO\" en utilisant la méthode affine avec les clés\n"
+    "a=5 "
+    " et "
+    " b=8\n"
+     dans l'alphabet anglais, où chaque lettre est représentée par un nombre de 0 à 25\n"
+        "Assignation des valeurs numériques aux lettres :\n"
+
+    "H → 7 | "
+    "E → 4 | "
+    "L → 11 | "
+    "L → 11 | "
+    "O → 14 |\n ""Application de la formule de chiffrement :\n"
+    "E(x)=(ax+b)"
+    "\n"""
+    "Conversion des valeurs chiffrées en lettres :\n"
+    "15 → P | "
+    "4 → E | "
+    "13 → N | "
+    "13 → N | "
+    "10 → K</string>
 
 
 </resources>

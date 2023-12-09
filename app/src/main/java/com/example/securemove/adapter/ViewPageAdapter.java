@@ -1,4 +1,4 @@
-package com.example.securemove;
+package com.example.securemove.adapter;
 
 
 import android.content.Context;
@@ -14,6 +14,7 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.airbnb.lottie.LottieDrawable;
+import com.example.securemove.R;
 
 public class ViewPageAdapter extends PagerAdapter {
 
